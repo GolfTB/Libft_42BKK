@@ -6,16 +6,16 @@
 /*   By: paphetpr <marvin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 18:24:00 by paphetpr          #+#    #+#             */
-/*   Updated: 2024/09/14 19:28:14 by paphetpr         ###   ########.fr       */
+/*   Updated: 2024/09/15 12:52:21 by paphetpr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stddef.h>
 
 typedef struct s_list
 {
@@ -29,7 +29,7 @@ typedef struct s_split_next
 	size_t			length;
 }					t_split_next;
 
-int					get_num(const char *str, int i);
+long				get_num(const char *str, int i);
 
 int					check_space(const char *c, int i);
 
@@ -49,7 +49,7 @@ int					ft_isdigit(int c);
 
 int					ft_isprint(int c);
 
-size_t				get_len(int number);
+size_t				get_len(int n);
 
 char				*ft_itoa(int n);
 
@@ -71,6 +71,10 @@ void				ft_putnbr_fd(int n, int fd);
 
 void				ft_putstr_fd(char *s, int fd);
 
+void				ft_get_str(char const *s, char c, char **res);
+
+void				ft_get_tab(char const *s, char c, char **res);
+
 char				**ft_split(char const *s, char c);
 
 char				*ft_strchr(const char *s, int c);
@@ -91,14 +95,14 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
-char				*ft_strnstr(const char *big,
-						const char *little, size_t len);
+char				*ft_strnstr(const char *big, const char *little,
+						size_t len);
 
 char				*ft_strrchr(const char *s, int c);
 
 char				*ft_strtrim(char const *s1, char const *set);
 
-char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_substr(char const *str, unsigned int start, size_t len);
 
 int					ft_tolower(int c);
 

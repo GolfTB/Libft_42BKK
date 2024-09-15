@@ -6,7 +6,7 @@
 #    By: paphetpr <marvin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/14 18:12:23 by paphetpr          #+#    #+#              #
-#    Updated: 2024/09/14 19:41:48 by paphetpr         ###   ########.fr        #
+#    Updated: 2024/09/15 12:55:39 by paphetpr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,11 +36,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-bonus: $(NAME) $(OBJSB)
-	ar -rcs $(NAME) $(OBJSB)
-
 clean:
-	rm -f $(OBJS) $(OBJSB)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
